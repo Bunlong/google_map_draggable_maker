@@ -1,3 +1,8 @@
+// -------------------------------------------------------------------
+// @author Bunlong <bunlong.van@gmail>
+// Created :  6 Jun 2014 by Bunlong
+// -------------------------------------------------------------------
+
 MapDraggableMarker = function(element, lat, lng, zoom, coordsLenght, elementLat, elementLng) {
   this.element = element;
   this.lat = lat;
