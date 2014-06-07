@@ -6,12 +6,14 @@
   <link rel="stylesheet" href="styles.css" />
   <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
   <script type="text/javascript" src="jquery-1.11.1.min.js"></script>
-  <script type="text/javascript" src="google_map_draggable.js"></script>
+  <script type="text/javascript" src="google_map_draggable_maker.js"></script>
   <script type="text/javascript">
     $(document).ready(function() {
       var lat = ($("#latitude").val() == "") ? 11.558831 : $("#latitude").val(),
           lng = ($("#longitude").val() == "") ? 104.917445 : $("#longitude").val(),
-          mapDraggableMarker = new MapDraggableMarker($("#canvas")[0], lat, lng, 15, 6, $("#latitude"), $("#longitude"));
+          zoom = 15,
+          coordslenght = 6,
+          mapDraggableMarker = new MapDraggableMarker($("#canvas")[0], lat, lng, zoom, coordslenght, $("#latitude"), $("#longitude"));
           
       mapDraggableMarker.init();
     });
