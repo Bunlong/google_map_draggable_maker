@@ -12,8 +12,16 @@
       var lat = ($("#latitude").val() == "") ? 11.558831 : $("#latitude").val(),
           lng = ($("#longitude").val() == "") ? 104.917445 : $("#longitude").val(),
           zoom = 15,
-          coordslenght = 6,
-          mapDraggableMarker = new MapDraggableMarker($("#canvas")[0], lat, lng, zoom, coordslenght, $("#latitude"), $("#longitude"));
+          coordslenght = 6;
+
+          mapDraggableMarker = new MapDraggableMarker({ element: $("#canvas")[0], 
+                                                        lat: lat, 
+                                                        lng: lng, 
+                                                        zoom: zoom, 
+                                                        coordsLenght: coordslenght, 
+                                                        elementLat: $("#latitude"), 
+                                                        elementLng: $("#longitude")
+                                                      });
           
       mapDraggableMarker.init();
     });

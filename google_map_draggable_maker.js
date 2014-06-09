@@ -3,16 +3,18 @@
 // Created :  6 Jun 2014 by Bunlong
 // -------------------------------------------------------------------
 
-MapDraggableMarker = function(element, lat, lng, zoom, coordsLenght, elementLat, elementLng) {
-  this.element = element;
-  this.lat = lat;
-  this.lng = lng;
-  this.zoom = zoom;
-  this.coordsLenght = coordsLenght;
-  this.elementLat = elementLat;
-  this.elementLng = elementLng;
+// options = {elementh, lat:, lng, zoom, coordsLenght, elementLat, elementLng}
 
-  this.map = new google.maps.Map(element, {
+MapDraggableMarker = function(options) {
+  this.element = options.element;
+  this.lat = options.lat;
+  this.lng = options.lng;
+  this.zoom = options.zoom;
+  this.coordsLenght = options.coordsLenght;
+  this.elementLat = options.elementLat;
+  this.elementLng = options.elementLng;
+
+  this.map = new google.maps.Map(this.element, {
     zoom: this.zoom,
     center: new google.maps.LatLng(this.lat, this.lng),
     mapTypeId: google.maps.MapTypeId.ROADMAP
