@@ -3,7 +3,7 @@
 // Created :  6 Jun 2014 by Bunlong
 // -------------------------------------------------------------------
 
-// options = {elementh, lat:, lng, zoom, coordsLenght, elementLat, elementLng}
+// options = {elementh, lat, lng, zoom, coordsLenght, elementLat, elementLng}
 
 MapDraggableMarker = function(options) {
   this.element = options.element;
